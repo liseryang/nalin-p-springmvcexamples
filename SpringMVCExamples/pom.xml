@@ -10,10 +10,6 @@
   <name>SpringMVCExamples</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -48,15 +44,115 @@
         <artifactId>standard</artifactId>
         <version>1.1.2</version>
     </dependency>
+
+	<!-- tiles --> 
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-core</artifactId>
+		<version>2.0.5</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.tiles</groupId>
+		<artifactId>tiles-jsp</artifactId>
+		<version>2.0.5</version>
+	</dependency>
   </dependencies>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+	<!-- general -->
+    <server.name>localhost</server.name>
+
+	<!--  tomcat -->
+	<tomcat.home>${env.TOMCAT_HOME}</tomcat.home>
+	<exec.extension>sh</exec.extension>
+	<server.port>8080</server.port>
+	<server.port.mod>:${server.port}</server.port.mod>
+	<jpda.address>8000</jpda.address>
+    <tomcat.max.memory>256</tomcat.max.memory>
+    <tomcat.max.perm.size>128</tomcat.max.perm.size>
+  </properties>
+
    <build>
        <finalName>SpringMVCExamples</finalName>
-         <plugins>
-             <plugin>
-                  <groupId>org.mortbay.jetty</groupId>
-                  <artifactId>maven-jetty-plugin</artifactId>
-             </plugin>
-         </plugins>
+       <plugins>
+<!--  Jetty plugin
+		 <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>maven-jetty-plugin</artifactId>
+         </plugin>
+-->
+       </plugins>
    </build>
 
+  <profiles>
+    <profile>
+      <id>tomcat-rebuild</id>
+      <activation>
+        <property>
+          <name>env</name>
+          <value>local</value>
+        </property>
+      </activation>       
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-antrun-plugin</artifactId>
+            <dependencies>
+            </dependencies>
+            <executions>
+                <execution>
+                <id>stop.tomcat</id>
+                <phase>initialize</phase>
+                <configuration>
+                   <tasks>
+                        <exec dir="${tomcat.home}/bin" executable="${tomcat.home}/bin/catalina.${exec.extension}">
+                            <arg line="stop" />
+                        </exec>
+                        <exec dir="." executable="${basedir}/src/script/remote/immediateTomcatKill.sh" />
+                    </tasks>            
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>            
+              <execution>
+                <id>start.tomcat</id>
+                <phase>pre-integration-test</phase>
+                <configuration>
+                   <tasks>
+                        <property name="dist.dir" value="target" />
+                        <property name="basename" value="SpringMVCExamples" />
+                        <property name="war.name" value="${basename}.war" />
+                        <waitfor maxwait="100000">
+                            <not>
+                                <socket server="${server.name}" port="${server.port}"/>
+                            </not>  
+                        </waitfor>
+                        <copy file="${dist.dir}/${war.name}" todir="${tomcat.home}/webapps" />
+                        <delete dir="${tomcat.home}/webapps/${basename}" />
+                        <delete dir="${tomcat.home}/work/Catalina/localhost/${basename}" />
+
+                        <exec dir="${tomcat.home}/bin" executable="${tomcat.home}/bin/catalina.${exec.extension}">
+                            <arg line="jpda start" />
+                            <env key="CATALINA_OPTS" value="-server -Dcom.sun.management.jmxremote -Duser.timezone=UTC -Xms64m -Xmx${tomcat.max.memory}m -XX:MaxPermSize=${tomcat.max.perm.size}m" />
+                            <env key="JPDA_ADDRESS" value="${jpda.address}"/>
+                        </exec>
+                        <waitfor maxwait="100000">
+                            <http url="http://${server.name}${server.port.mod}/SpringMVCExamples/"/>
+                        </waitfor>
+                        <echo message="server up" />
+                    </tasks>            
+                </configuration>
+                <goals>
+                  <goal>run</goal>
+                </goals>
+              </execution>             
+            </executions>
+          </plugin>            
+        </plugins>     
+      </build>    
+    </profile>
+  </profiles>
 </project>
