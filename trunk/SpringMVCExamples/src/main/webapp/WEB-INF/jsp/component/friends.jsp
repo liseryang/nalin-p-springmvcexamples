@@ -1,0 +1,1 @@
+<b>Friends Module</b>
