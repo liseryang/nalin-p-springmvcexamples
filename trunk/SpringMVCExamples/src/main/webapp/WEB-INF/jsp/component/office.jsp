@@ -1,1 +1,1 @@
-<b>Office Module</b>
+<b>${pagename}</b> -- Office Module

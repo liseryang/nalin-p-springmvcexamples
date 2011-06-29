@@ -1,1 +1,1 @@
-<b>Friends Module</b>
+<b>${pagename}</b> -- Friends Module

@@ -1,1 +1,1 @@
-<b>About Module</b>
+<b>${pagename}</b> -- About Module

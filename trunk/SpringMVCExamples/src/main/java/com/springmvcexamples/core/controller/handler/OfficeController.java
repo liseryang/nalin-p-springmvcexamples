@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
+ * PT-04
  * url pattern:
  *  /office
  * @author nalin
@@ -27,7 +28,8 @@ public class OfficeController extends AbstractSEOController<String> {
 
     @RequestMapping
     public ModelAndView handleRequest() throws ServletException, IOException {
-        return new ModelAndView("office");
+        return new ModelAndView(PageConstants.PAGE_NAME_OFFICE)
+                    .addObject("pagename", PageConstants.PAGE_NAME_OFFICE);
     }
 
     @Override
@@ -45,6 +47,6 @@ public class OfficeController extends AbstractSEOController<String> {
 
     @Override
     public List<String> getSupportedPages() {
-        return Arrays.asList("office");
+        return Arrays.asList(PageConstants.PAGE_NAME_OFFICE);
     }
 }
