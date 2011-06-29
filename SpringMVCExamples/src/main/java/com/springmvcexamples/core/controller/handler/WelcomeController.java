@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
+ * PT-05
  * url pattern:
  *  /welcome
  * @author nalin
@@ -27,7 +28,8 @@ public class WelcomeController extends AbstractSEOController<String> {
 
     @RequestMapping
     public ModelAndView handleRequest() throws ServletException, IOException {
-        return new ModelAndView("welcome");
+        return new ModelAndView(PageConstants.PAGE_NAME_WELCOME)
+                    .addObject("pagename", PageConstants.PAGE_NAME_WELCOME);
     }
 
     @Override
@@ -45,6 +47,6 @@ public class WelcomeController extends AbstractSEOController<String> {
 
     @Override
     public List<String> getSupportedPages() {
-        return Arrays.asList("welcome");
+        return Arrays.asList(PageConstants.PAGE_NAME_WELCOME);
     }
 }

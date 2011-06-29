@@ -1,1 +1,1 @@
-<b>Welcome Module</b>
+<b>${pagename}</b> -- Welcome Module

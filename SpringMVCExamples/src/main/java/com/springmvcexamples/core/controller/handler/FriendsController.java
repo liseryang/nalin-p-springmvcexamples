@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
+ * PT-03
  * url pattern:
  *  /friends
  * @author nalin
@@ -27,7 +28,8 @@ public class FriendsController extends AbstractSEOController<String> {
 
     @RequestMapping
     public ModelAndView handleRequest() throws ServletException, IOException {
-        return new ModelAndView("friends");
+        return new ModelAndView(PageConstants.PAGE_NAME_FRIENDS)
+                    .addObject("pagename", PageConstants.PAGE_NAME_FRIENDS);
     }
 
     @Override
@@ -45,6 +47,6 @@ public class FriendsController extends AbstractSEOController<String> {
 
     @Override
     public List<String> getSupportedPages() {
-        return Arrays.asList("friends");
+        return Arrays.asList(PageConstants.PAGE_NAME_FRIENDS);
     }
 }
