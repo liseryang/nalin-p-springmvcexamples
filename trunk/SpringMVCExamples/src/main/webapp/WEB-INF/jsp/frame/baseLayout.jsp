@@ -1,32 +1,24 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/"
+	  xmlns:fb="http://developers.facebook.com/schema/">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
 	<title><tiles:insertAttribute name="title" ignore="true" /></title>
+	<link rel="stylesheet" type="text/css" href="css/elements.css"/>
+	<link rel="stylesheet" type="text/css" href="css/grids.css"/>
 </head>
 <body>
-	<h1>baseLayout</h1>
-	<table border="1" cellpadding="2" cellspacing="2" align="center">
-		<tr>
-			<td height="30" colspan="2">
-				<tiles:insertAttribute name="header" />
-			</td>
-		</tr>
-		<tr>
-			<td height="250">
-				<tiles:insertAttribute name="menu" />
-			</td>
-			<td width="350">
-				<tiles:insertAttribute name="body" />
-			</td>
-		</tr>
-		<tr>
-			<td height="30" colspan="2">
-				<tiles:insertAttribute name="footer" />
-			</td>
-		</tr>
-	</table>
+	<div class="TSW1">
+		<div class="TR THD">
+			<tiles:insertAttribute name="header" />
+		</div>
+		<div class="TR">
+			<tiles:insertAttribute name="body" />
+		</div>
+		<div class="TR">
+			<tiles:insertAttribute name="footer" />
+		</div>
+	</div>
 </body>
 </html>

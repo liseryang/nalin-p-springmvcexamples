@@ -1,0 +1,32 @@
+/****************************** Element Start *************************************************************************/ 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+
+table {border-collapse:collapse;border-spacing:0;}
+fieldset, img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+li {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;font-variant:normal;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+input,textarea,select {font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select {*font-size:100%;} 
+legend {color:#000;}
+
+body {font:14px helvetica neue,helvetica,arial,sans-serif;line-height:18px;color:#464646;
+	background: url(http://nalin.office.lunch.com/img/background.png) repeat-x;}
+a, a:link, a:visited, a:active {color:#1285c8; text-decoration:none;}
+input, .input, textarea {background:#fff; padding:4px 2px; *padding:4px 0.75%;}
+input, textarea, select{color: #555555;font-family:helvetica; border:1px solid #999999; }
+input.inputReset{width:auto!important; height:auto!important; vertical-align:bottom;border:none;background:transparent;}
+input.file {height:22px!important;padding:0!important; }
+.singleLineTextArea {height:25px; *height:17px; *overflow:auto;}
+input.small {height:10px;}
+a:hover {text-decoration:underline;}
+button {background-color:transparent; border:0; padding:0; font-size:14px;font-family:helvetica;cursor:pointer; outline:none;width:auto; overflow:visible;}
+p {padding-bottom:10px;}
+h1 {font-size:34px; font-weight:bold; line-height:40px;}
+h2 {font-size:34px; font-weight:bold; margin-bottom:20px;}
+h3 {font-size:26px; padding-bottom:10px; font-weight:bold;}
