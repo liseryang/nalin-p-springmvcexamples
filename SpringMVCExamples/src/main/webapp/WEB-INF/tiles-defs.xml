@@ -6,7 +6,6 @@
 	<definition name="baseLayout" template="/WEB-INF/jsp/frame/baseLayout.jsp">
 		<put-attribute name="title"  value="Template"/>
 		<put-attribute name="header" value="/WEB-INF/jsp/frame/header.jsp"/>
-		<put-attribute name="menu"   value="/WEB-INF/jsp/frame/menu.jsp"/>
 		<put-attribute name="body"   value="/WEB-INF/jsp/frame/body.jsp"/>
 		<put-attribute name="footer" value="/WEB-INF/jsp/frame/footer.jsp"/>
 	</definition>
