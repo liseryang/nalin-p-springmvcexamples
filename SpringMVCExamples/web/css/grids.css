@@ -1,5 +1,11 @@
 /*=== Template Super Wrapper ===*/
-.TSW1 {margin:0 auto;width:980px;}
+.TSW {margin:0 auto;width:980px;}
+
+/*=== Template Wrapper ===
+.TW {border:1px solid #a7b9c3;padding:30px;*zoom:1;background-color:#fff;
+	-moz-box-shadow:0 2px 2px 0 #000; -webkit-box-shadow:0 2px 2px 0 #000; box-shadow:0 2px 2px 0 #000;
+	-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;
+}*/
 
 /*=== Template Header/Footer ===*/
 .THD {padding:20px 0 5px 0;}
