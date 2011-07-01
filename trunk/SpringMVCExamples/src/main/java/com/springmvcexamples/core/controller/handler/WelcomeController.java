@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * PT-05
+ * PT-01
  * url pattern:
  *  /welcome
  * @author nalin
