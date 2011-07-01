@@ -3,29 +3,29 @@
 	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
 	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
-	<definition name="baseLayout" template="/WEB-INF/jsp/frame/baseLayout.jsp">
+	<definition name="Frame" template="/WEB-INF/jsp/frame/Frame.jsp">
 		<put-attribute name="title"  value="Template"/>
-		<put-attribute name="header" value="/WEB-INF/jsp/frame/header.jsp"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/frame/body.jsp"/>
-		<put-attribute name="footer" value="/WEB-INF/jsp/frame/footer.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/jsp/component/Header.jsp"/>
+		<put-attribute name="body"   value="/WEB-INF/jsp/template/Template_0.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/jsp/component/Footer.jsp"/>
 	</definition>
 
 	<!-- PT-01 -->
-	<definition name="welcome" extends="baseLayout">
-		<put-attribute name="title"  value="Welcome"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/component/welcome.jsp"/>
+	<definition name="welcome" extends="Frame">
+		<put-attribute name="title"  value="Welcome page title"/>
+		<put-attribute name="body"   value="/WEB-INF/jsp/component/core/Welcome.jsp"/>
 	</definition>
 
 	<!-- PT-02 -->
-	<definition name="home" extends="baseLayout">
-		<put-attribute name="title"  value="Welcome"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/component/home.jsp"/>
+	<definition name="home" extends="Frame">
+		<put-attribute name="title"  value="Home page title"/>
+		<put-attribute name="body"   value="/WEB-INF/jsp/component/core/Home.jsp"/>
 	</definition>
 
 	<!-- PT-03 -->
-	<definition name="about" extends="baseLayout">
-		<put-attribute name="title"  value="Welcome"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/component/about.jsp"/>
+	<definition name="about" extends="Frame">
+		<put-attribute name="title"  value="About page title"/>
+		<put-attribute name="body"   value="/WEB-INF/jsp/component/core/About.jsp"/>
 	</definition>
 
 </tiles-definitions>

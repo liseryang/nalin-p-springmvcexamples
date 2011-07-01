@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/grids.css"/>
 </head>
 <body>
-	<div class="TSW1">
+	<div class="TSW">
 		<div class="TR THD">
 			<tiles:insertAttribute name="header" />
 		</div>
