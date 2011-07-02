@@ -3,29 +3,54 @@
 	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
 	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
+	<!-- === Frame === -->
 	<definition name="Frame" template="/WEB-INF/jsp/frame/Frame.jsp">
-		<put-attribute name="title"  value="Template"/>
-		<put-attribute name="header" value="/WEB-INF/jsp/component/Header.jsp"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/template/Template_0.jsp"/>
-		<put-attribute name="footer" value="/WEB-INF/jsp/component/Footer.jsp"/>
+		<put-attribute name="title"       value="Template"/>
+		<put-attribute name="header"      value="Header"/>
+		<put-attribute name="template"    value="Template_0"/>
+		<put-attribute name="footer"      value="Footer"/>
 	</definition>
 
+	<!-- === Templates === -->
+	<!-- T-00 -->
+	<definition name="Template_0" template="/WEB-INF/jsp/template/Template_0.jsp"/>
+
+	<!-- === Pages === -->
 	<!-- PT-01 -->
 	<definition name="welcome" extends="Frame">
 		<put-attribute name="title"  value="Welcome page title"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/component/core/Welcome.jsp"/>
+		<put-attribute name="template"   value="Module1"/>
 	</definition>
 
 	<!-- PT-02 -->
 	<definition name="home" extends="Frame">
 		<put-attribute name="title"  value="Home page title"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/component/core/Home.jsp"/>
+		<put-attribute name="template"   value="Module2"/>
 	</definition>
 
 	<!-- PT-03 -->
 	<definition name="about" extends="Frame">
 		<put-attribute name="title"  value="About page title"/>
-		<put-attribute name="body"   value="/WEB-INF/jsp/component/core/About.jsp"/>
+		<put-attribute name="template"   value="Module3"/>
 	</definition>
+
+
+	<!-- === Global Modules === -->
+	<!-- Header module -->
+	<definition name="Header" template="/WEB-INF/jsp/component/Header.jsp" />
+
+	<!-- Footer module -->
+	<definition name="Footer" template="/WEB-INF/jsp/component/Footer.jsp" />
+
+
+	<!-- === Modules === -->
+	<!-- DM-01 Module1 module -->
+	<definition name="Module1" template="/WEB-INF/jsp/component/core/Module1.jsp" />
+
+	<!-- DM-02 Module2 module -->
+	<definition name="Module2" template="/WEB-INF/jsp/component/core/Module2.jsp" />
+
+	<!-- DM-03 Module3 module -->
+	<definition name="Module3" template="/WEB-INF/jsp/component/core/Module3.jsp" />
 
 </tiles-definitions>
