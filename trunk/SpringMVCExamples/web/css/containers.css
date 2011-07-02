@@ -1,0 +1,11 @@
+.hd:after, .bd:after, .row:after,
+.C1:after
+{content:"."; display:block; height:0; clear:both; visibility:hidden; *zoom: 1; line-height:0; font-size:0}
+     
+.hd, .bd, .row,
+.C1
+{*display: inline-block;}
+
+.C1 {background:#fff; padding:15px; margin-bottom:17px;
+	-moz-box-shadow:0 2px 2px 0 #000; -webkit-box-shadow:0 2px 2px 0 #000; box-shadow:0 2px 2px 0 #000;
+	-moz-border-radius:6px;-webkit-border-radius:6px; border-radius:6px;}
