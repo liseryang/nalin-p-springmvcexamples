@@ -24,6 +24,7 @@ public abstract class AbstractSEOController<E> implements SEOController<E> {
         urlFactory.register(this.getSupportedPages(), this);        
     }
 
+    @Override
     public final void prepareAllData(HttpServletRequest request, String path, List<E> params) {
         ControllerUtil.init();
         prepareUrlData(request, path, params);

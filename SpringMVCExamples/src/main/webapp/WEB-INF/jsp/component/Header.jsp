@@ -2,9 +2,9 @@
 <div class="gHd">
 	<div class="bd">
 		<ul class="hList">
-			<li class="first"><a href="/">Home</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/welcome">Welcome</a></li>
+		<c:forEach items="${menuItems}" var="menuItem" varStatus="index">
+			<li <c:if test="${index.first}">class="first"</c:if>><a href="${menuItem.url}">${menuItem.label}</a></li>
+		</c:forEach>
 		</ul>
 	</div>
 </div>

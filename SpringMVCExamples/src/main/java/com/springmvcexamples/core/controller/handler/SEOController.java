@@ -10,5 +10,7 @@ public interface SEOController<E> {
 
     public boolean canHandle(HttpServletRequest request, String path, List<E> args);
 
+    public void prepareAllData(HttpServletRequest request, String path, List<E> params);
+
     public List<String> getSupportedPages();
 }
