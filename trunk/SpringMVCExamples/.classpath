@@ -31,5 +31,40 @@
 			<attribute name="maven.version" value="2.5"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/home/nalin/.m2/repository/org/apache/tiles/tiles-core/2.2.2/tiles-core-2.2.2.jar" sourcepath="/home/nalin/.m2/repository/org/apache/tiles/tiles-core/2.2.2/tiles-core-2.2.2-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.apache.tiles"/>
+			<attribute name="maven.artifactId" value="tiles-core"/>
+			<attribute name="maven.version" value="2.2.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/nalin/.m2/repository/org/apache/tiles/tiles-api/2.2.2/tiles-api-2.2.2.jar" sourcepath="/home/nalin/.m2/repository/org/apache/tiles/tiles-api/2.2.2/tiles-api-2.2.2-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.apache.tiles"/>
+			<attribute name="maven.artifactId" value="tiles-api"/>
+			<attribute name="maven.version" value="2.2.2"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/nalin/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" sourcepath="/home/nalin/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="commons-lang"/>
+			<attribute name="maven.artifactId" value="commons-lang"/>
+			<attribute name="maven.version" value="2.6"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/nalin/.m2/repository/log4j/log4j/1.2.15/log4j-1.2.15.jar" sourcepath="/home/nalin/.m2/repository/log4j/log4j/1.2.15/log4j-1.2.15-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="log4j"/>
+			<attribute name="maven.artifactId" value="log4j"/>
+			<attribute name="maven.version" value="1.2.15"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/nalin/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" sourcepath="/home/nalin/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="commons-collections"/>
+			<attribute name="maven.artifactId" value="commons-collections"/>
+			<attribute name="maven.version" value="3.2.1"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -37,7 +37,7 @@
 
 	<!-- === Global Modules === -->
 	<!-- Header module -->
-	<definition name="Header" template="/WEB-INF/jsp/component/Header.jsp" />
+	<definition name="Header" template="/WEB-INF/jsp/component/Header.jsp" preparer="com.springmvcexamples.core.view.core.HeaderPreparer" />
 
 	<!-- Footer module -->
 	<definition name="Footer" template="/WEB-INF/jsp/component/Footer.jsp" />
